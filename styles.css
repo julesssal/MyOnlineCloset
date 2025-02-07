@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #007278;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+
+/* -------------------login/register view------------------------------ */
+.login-container {
+    display: flex;
+    max-width: 1000px;
+    width: 90%;
+    background-color: #007278;
+    border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+#login-pic {
+    flex: 1;
+}
+
+
+#login-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px; 
+}
+
+.form-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #007278;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #d5a39d; 
+    margin-bottom: 10px;
+}
+
+p {
+    color: #30adb4; 
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c5c6ca;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #57575b; 
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d5a39d; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #bb8c87; 
+}
+
+.forgot-password {
+    margin-top: 10px;
+    text-align: center;
+    color: #30adb4; 
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* ------------------- Homepage------------------------------ */
+ 
