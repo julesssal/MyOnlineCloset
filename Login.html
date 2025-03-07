@@ -10,15 +10,18 @@
   </head>
   <body> 
     <div class="title-container">
-      <img
+      <!--img
         src="images/SS_logo.png"
         alt="StyleSphere Logo"
         class="ss-logo"
-      />
+        style="height: 50px; width: auto;"
+      /-->
+     
+   
     </div>
     <div class="login-container">
       <section class="loginPic-container" id="login-pic">
-        <img src="images/login.jpg" alt="Login Background Image" />
+        <img src="images/SS_logo.png" alt="Login Background Image" style="height: auto; width: auto; margin-top: 25%;" />
       </section>
       <div class="form-section" id="login-section">
         <h2>Log In or Register Below!</h2>
@@ -51,6 +54,7 @@
 
       <!-- Register box -->
       <div class="form-section" id="register-section" style="display: none">
+        <a href="#" style="text-decoration:none; float: right; color: #fefefe" onclick="showLogin()">X</a> <!--added X to escape page-->
         <h2>Register</h2>
         <p>Create an account to get started!</p>
         <div class="input-group">
