@@ -126,7 +126,7 @@ app.post('/api/auth/logout', (req, res) => {
   res.status(200).json({ message: 'Logged out successfully.' });
 });
 
-// upload ROute
+// upload Route
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, './uploads'); 
