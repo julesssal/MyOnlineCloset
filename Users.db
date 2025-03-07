@@ -6,3 +6,5 @@
 {"userName":"test3","email":"test3@gmail.com","password":"$2a$10$mSTjXPFO/3e0LEuDvJbv4.p1JVYaV1jVK8QP3zBbp3TkxZQOu/yNO","role":"member","2faEnable":false,"2faSecret":null,"_id":"q3EV9nHvx9Pgshjk"}
 {"userName":"test2","email":"test2@gmail.com","password":"$2a$10$axxZboBtnIqw/bnEnFlEqu8Cs8Tn43Tkg7N4TosuGUvnMlURtq8Hi","role":"member","2faEnable":false,"2faSecret":null,"_id":"vndyOtnqsLi1hwXY"}
 {"userName":"Test7","email":"test7@gmail.com","password":"$2a$10$O5VWYtTE0VgT8zPcMf.6UeFim3qHo6vRrtrEidmm2BqRWx4CDPila","role":"member","2faEnable":false,"2faSecret":null,"_id":"yoTLlpMnZbDmAOOP"}
+{"userName":"Biggie Smalls","email":"notorious@big.com","password":"$2a$10$UVqdkp0VPj/4bgAIT4AYteTo3qkptrU97gXGPXQJcQWuuTIAZ13r2","role":"member","2faEnable":false,"2faSecret":null,"_id":"OP7p52BZycVIUZeY"}
+{"userName":"Leilani Alma","email":"llama@email.com","password":"$2a$10$sud9b7ar/3QIyzRfh1I02eXuWWmrt7iUiew8j0N439l.SaElQgVDW","role":"member","2faEnable":false,"2faSecret":null,"_id":"gKFKwtg68HARDRR2"}

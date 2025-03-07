@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Item</title>
+    <link rel="stylesheet" href="upload.css" />
+  </head>
+  <body>
+    <div class="upload-container">
+      <div class="upload-header">
+        <h1>Upload Item</h1>
+        <p>Share your style with the closet and our stylist</p>
+      </div>
+      <div class="upload-content">
+        <div class="image-preview">
+          <div class="image-box">
+            <div class="inner-box">
+              <img id="preview-image" src="" alt="Preview" />
+            </div>
+          </div>
+        </div>
+        <input
+          type="file"
+          id="image-upload"
+          accept="image/*"
+          style="display: none"
+          onchange="previewImage(event)"
+        />
+        <button class="upload-button" id="upload-button">Upload Image</button>
+      </div>
+      <div class="upload-footer">
+        <div class="footer-item">
+          <h3>Category</h3>
+          <select id="category-select" onchange="handleCategoryChange()">
+            <option value="">Select</option>
+            <option value="Tops">Tops</option>
+            <option value="Bottoms">Bottoms</option>
+            <option value="Coats">Coats</option>
+            <option value="Sweaters">Sweaters</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Accessories">Accessories</option>
+          </select>
+        </div>
+        <div class="footer-item" id="tag-box" style="display: none">
+          <h3>Type</h3>
+          <select id="tag-select"></select>
+        </div>
+      </div>
+
+      <button class="submit-button" id="submit-button" style="display: none">
+        Submit
+      </button>
+      <button class="close-button" onclick="redirectToHomepage()">×</button>
+
+      <script src="upload.js"></script>
+      <footer>
+        <p>© 2024 Online Stylist</p>
+      </footer>
+    </div>
+  </body>
+</html>
