@@ -5,38 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- FontAwesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
   </head>
-  <body>
+  <body> 
+    <div class="title-container">
+      <img
+        src="images/SS_logo.png"
+        alt="StyleSphere Logo"
+        class="ss-logo"
+      />
+    </div>
     <div class="login-container">
       <section class="loginPic-container" id="login-pic">
         <img src="images/login.jpg" alt="Login Background Image" />
       </section>
       <div class="form-section" id="login-section">
-        <h2>Log in,</h2>
-        <p>We got work to do!</p>
+        <h2>Log In or Register Below!</h2>
+        <p></p>
         <!-- Login box -->
         <form action="#" id="login-form" onsubmit="event.preventDefault(); login();">
           <div class="input-box">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required/>
+            <div class="password-wrapper">
+              <input type="email" id="email" placeholder="Enter your email" required/>
+            </div>
           </div>
           <div class="input-box">
             <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password" required
-            />
+            <div class="password-wrapper">
+              <input type="password" id="password" placeholder="Password" required/>
+              <i class="fas fa-eye-slash show_hide"></i>
+            </div>
           </div>
           <button type="submit" class="btn" id="login-btn">Sign In</button>
-          </button>
+          <p></p>
           <a href="#" class="forgot-password">Forgot password?</a>
         </form>
         <p class="switch">
-          <span
-            >Don't have an account?
-            <a href="#" onclick="showRegister()">Register here</a></span
-          >
+          <span>
+            <a href="#" onclick="showRegister()">Register Here!</a>
+          </span>
         </p>
       </div>
 
@@ -47,44 +56,44 @@
         <div class="input-group">
           <div class="input-box">
             <label for="userName">Username</label>
-            <input
-              type="text"
-              class="reg-input-box"
-              id="userName"
-              placeholder="Username"
-              required
-            />
+            <div class="password-wrapper">
+            <input type="text" class="reg-input-box" id="userName" placeholder="Username" required/>
+            <p></p>
           </div>
           <div class="input-box">
             <label for="regEmail">Email</label>
-            <input
-              type="email"
-              class="reg-input-box"
-              id="regEmail"
-              placeholder="Email"
-              required
-            />
+            <div class="password-wrapper">
+            <input type="email" class="reg-input-box" id="regEmail" placeholder="Email" required/>
+            <p></p>
           </div>
           <div class="input-box">
             <label for="regPassword">Password</label>
-            <input
-              type="password"
-              class="reg-input-box"
-              id="regPassword"
-              placeholder="Password"
-              required
-            />
+            <div class="password-wrapper">
+              <input type="password" class="reg-input-box" id="regPassword" placeholder="Strong Password" required/>
+              <i class="fas fa-eye-slash show_hide"></i>
+              <p></p>
+            </div>
+            <div class="indicator">
+              <div class="icon-text">
+                <i class="fas fa-exclamation-circle error_icon"></i>
+                <h6 class="text"></h6>
+              </div>
+            </div>
+            <!-- Added password guidelines text here -->
+            <p class="password-requirements">
+              Password must include the following:
+              <br>At least 8 characters
+              <br>At least 1 number
+              <br>At least 1 special character
+            </p>
           </div>
-          <button class="btn" id="register-btn" onclick="register()">
-            Register
-          </button>
+          <button class="btn" id="register-btn" onclick="register()">Register</button>
           <div id="registration-error" style="color: red"></div>
         </div>
         <p class="switch">
-          <span
-            >Already have an account?
-            <a href="#" onclick="showLogin()">Log in here</a></span
-          >
+          <span>Already have an account?
+            <a href="#" onclick="showLogin()">Log in here</a>
+          </span>
         </p>
       </div>
     </div>

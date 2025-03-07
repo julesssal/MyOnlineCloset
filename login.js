@@ -64,3 +64,55 @@ async function login() {
         alert(`An error occurred: ${error.message}`);
     }
 }
+/***  PASSWORD STRENGTH CODE  ***/
+
+// Select all show/hide icons
+const showHideIcons = document.querySelectorAll(".show_hide");
+
+// Show/Hide Password Functionality
+showHideIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+        // Get the input element that is the previous sibling of the icon
+        const input = icon.previousElementSibling;
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.replace("fa-eye-slash", "fa-eye");
+        } else {
+            input.type = "password";
+            icon.classList.replace("fa-eye", "fa-eye-slash");
+        }
+    });
+});
+
+// Password Strength Checker for Register Page
+if (document.querySelector("#regPassword")) {
+    const regPasswordInput = document.querySelector("#regPassword");
+    const indicator = document.querySelector(".indicator");
+    const text = document.querySelector(".text");
+
+    let alphabet = /[a-zA-Z]/,
+        numbers = /[0-9]/,
+        scharacters = /[!,@,#,$,%,^,&,*,?,_,(,),-,+,=,~]/;
+
+    regPasswordInput.addEventListener("keyup", () => {
+        indicator.classList.add("active");
+        let val = regPasswordInput.value;
+
+        if (val.match(alphabet) || val.match(numbers) || val.match(scharacters)) {
+            text.textContent = "Password is weak";
+            regPasswordInput.style.borderColor = "#FF6333";
+        }
+        if (val.match(alphabet) && val.match(numbers) && val.length >= 6) {
+            text.textContent = "Password is medium";
+            regPasswordInput.style.borderColor = "#cc8500";
+        }
+        if (val.match(alphabet) && val.match(numbers) && val.match(scharacters) && val.length >= 8) {
+            text.textContent = "Password is strong";
+            regPasswordInput.style.borderColor = "#22C32A";
+        }
+        if (val === "") {
+            indicator.classList.remove("active");
+            regPasswordInput.style.borderColor = "#A6A6A6";
+        }
+    });
+}

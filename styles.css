@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,15 +11,29 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-
 }
 
+/* Center and responsively size the logo image */
+.title-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;  /* Adds space from the top edge so the image never touches it */
+    margin-bottom: 25px;    /* Space before the login-container starts */
+    box-sizing: border-box;
+  }
+  
+  .title-container .ss-logo {
+    max-width: 100%;
+    width: auto;
+    max-height: 350px; /* Adjust the max-height as needed */
+  }
 
 /* -------------------login/register view------------------------------ */
 .login-container {
     display: flex;
-    max-width: 1000px;
+    max-width: 800px;
     width: 90%;
+    margin-bottom: 20px;
     background-color: #007278;
     border-radius: 20px;
     object-fit: cover;
@@ -28,7 +44,6 @@ body {
 #login-pic {
     flex: 1;
 }
-
 
 #login-pic img {
     width: 100%;
@@ -46,36 +61,14 @@ body {
     justify-content: center;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #d5a39d; 
-    margin-bottom: 10px;
-}
-
-p {
-    color: #30adb4; 
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-}
-
 .input-box {
     margin-bottom: 15px;
 }
 
-.input-box label {
-    display: block;
-    margin-bottom: 5px;
-    color: #c5c6ca;
-}
-
-.input-box input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #57575b; 
-    color: #fff;
-    border-radius: 5px;
-    outline: none;
+.password-requirements {
+    color: #A6A6A6;  /* Change to your desired color */
+    font-size: 12px;  /* Change to your desired font size */
+    margin-top: 10px; /* Optional: adds a little space above the text */
 }
 
 .btn {
@@ -93,16 +86,50 @@ p {
     background-color: #bb8c87; 
 }
 
-.forgot-password {
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #57575b;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.password-wrapper .show_hide {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #A6A6A6;
+}
+
+/* Password Strength Indicator */
+.indicator {
+    display: none;
+}
+
+.indicator.active {
+    display: block;
     margin-top: 10px;
-    text-align: center;
-    color: #30adb4; 
-    text-decoration: none;
 }
 
-.forgot-password:hover {
-    text-decoration: underline;
+.icon-text {
+    display: flex;
+    align-items: center;
 }
 
-/* ------------------- Homepage------------------------------ */
- 
+.icon-text .error_icon {
+    margin-right: 8px;
+}
+
+.icon-text .text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}

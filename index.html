@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleSphere</title>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+<div class="navbar">
+  <div class="logo">
+    <img src="images/SS_logo.png" alt="StyleSphere Logo" 
+         style="height: 50px; width: auto;">
+    <span style="position: relative; top: -20px;">StyleSphere</span>
+  </div>
+  <ul>
+    <li><a href="homepage.html" id="home">Home</a></li>
+    <li><a href="closet.html">Closet</a></li>
+    <li><a href="stylist.html">Stylist</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li class="right"><a href="#" onclick="logout()">Logout</a></li>
+  </ul>
+</div>
+
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+      <div class="main-content">
+        <h1>Welcome Back, <span id="username-placeholder">User</span>!</h1>
+        <h3>Let's get Started</h3>
+        <button class="clothes-btn" onclick="redirectToUpload()">
+          Upload item
+        </button>
+      </div>
+
+      <!-- Weather Section -->
+      <div class="weather">
+        <div class="weather-info">
+          <div class="temperature-condition-wrapper">
+            <p class="temperature" id="temperature">37°F</p>
+            <p class="condition" id="condition">Cloudy</p>
+          </div>
+          <div class="location-date">
+            <p id="location">West Long Branch, New Jersey</p>
+            <p id="date">December 4, 2024</p>
+          </div>
+          <div class="hourly-forecast" id="hourly-forecast">
+            <!-- Weather forecast dynamically loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cards Section -->
+    <div class="cards">
+      <div class="card" onclick="redirectTo('closet.html')">
+        <h3>Closet</h3>
+        <img src="images/casual.webp" alt="Closet" />
+      </div>
+      <div class="card" onclick="redirectTo('stylist.html')">
+        <h3>Stylist</h3>
+        <img src="images/StylistPic.jpg" alt="Stylist" />
+      </div>
+      <div class="card" onclick="redirectTo('gallery.html')">
+        <h3>Gallery</h3>
+        <img src="images/Gallary.jpg" alt="Gallery" />
+      </div>
+    </div>
+
+    <script src="homepage.js"></script>
+  </body>
+</html>
